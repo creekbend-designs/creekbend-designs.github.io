@@ -1,0 +1,243 @@
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  background-color: #FFFFFF;
+}
+
+/* grid rules */
+.container {
+  max-width: 1200px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.limited {
+  max-width: 1200px;
+  margin: auto;
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+header img {
+  float: left;
+  height: 60px;
+  padding-right: 10px;
+}
+header h1, header h2 {
+  margin: 0;
+  color: #000000;
+  font-weight: 400;
+}
+header h1 {
+  padding: 0.5rem 0 0 0;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-style: bold;
+}
+header h2 {
+  font-size: 0.75rem;
+}
+
+/* header */
+main img {
+  width: 100%;
+  height: auto;
+}
+
+main h1, main h3, main h6 {
+  margin: 0.5rem 0 0.1rem 0;
+}
+
+main h1 {
+  font-size: 2rem;
+}
+
+main h3 {
+  font-size: 1.2rem;
+}
+
+main h6 {
+  font-size: 0.8rem;
+}
+
+main p {
+  font-size: 1.2rem;
+  margin: 0 0 0.3rem 0;
+}
+
+.pad-for-fixed {
+  padding-top: 65px;
+}
+
+.card {
+  border-color: #ffffff !important;
+}
+
+.form-control {
+  border-color: #000000;
+  border-radius: 0;
+  color: #000000;
+}
+
+.form-control:focus {
+  border-color: #000000;
+  /* box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6); */
+  box-shadow: none;
+}
+
+.custom-select {
+  text-transform: uppercase;
+}
+
+.tally-text {
+  border-color: #FFFFFF;
+  background-color: #FFFFFF;
+  border-style: none;
+}
+
+.tally-text-gr {
+  border-color: #cccccc;
+  background-color: #CCCCCC;
+  border-style: none;
+}
+
+tr td {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.asps-btn {
+  border-color: #000000;
+  box-shadow: none;
+  background-color: #FFFFFF;
+  border-radius: 0;
+  color: #000000;
+}
+
+.labeled {
+  position: relative;
+}
+
+.labeled h6, .labeled p {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  width: 100%;
+  padding: 0.3rem 1rem;
+}
+
+.labeled h6 {
+  top: 0;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.labeled p {
+  bottom: 0;
+  font-weight: 400;
+  color: #222222;
+}
+
+.pricing p {
+  font-size: 0.8rem;
+}
+
+.input-height {
+  height: 2rem !important;
+}
+
+.bg-light {
+  background-color: #cccccc !important;
+}
+
+footer {
+  background-color: #ffffff;
+  font-size: 1.2rem;
+}
+
+footer h2 {
+  font-style: italic;
+  text-transform: uppercase;
+  margin: 1rem 0 0.3rem 0;
+}
+
+@media only screen and (min-width: 576px) {
+  header img {
+    height: 85px;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  header h2 {
+    font-size: 1rem;
+  }
+
+  .pad-for-fixed {
+    padding-top: 90px;
+  }
+}
+/* end of small media query */
+@media only screen and (min-width: 768px) {
+  header h1 {
+    font-size: 2.85rem;
+  }
+
+  header h2 {
+    font-size: 1.4rem;
+  }
+
+  header img {
+    height: 100px;
+  }
+
+  .pad-for-fixed {
+    padding-top: 105px;
+  }
+
+  nav button {
+    display: none;
+  }
+
+  nav ul {
+    display: block;
+  }
+
+  nav li {
+    width: 25%;
+    float: left;
+  }
+}
+/* end of medium media query */
+@media only screen and (min-width: 992px) {
+  nav ul {
+    margin-left: 2vw;
+  }
+
+  nav li {
+    width: auto;
+  }
+
+  nav a {
+    padding: 0.7rem 1rem;
+  }
+}
+/* end of large media query */
+
+/*# sourceMappingURL=styles.css.map */

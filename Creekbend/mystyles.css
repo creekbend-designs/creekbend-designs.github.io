@@ -1,0 +1,590 @@
+/* ---------- s0_header ---------- */
+#s0_header{background-color: #eeeeee;}
+#s0_header_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+#s0_header_grid .creek_nav{
+    grid-column: 1 / 4;
+}
+
+#s0_header_grid .creek_logo{
+    grid-column: 4 / 5;
+    align-content: right;
+}
+
+#s0_header_grid img{
+    height: 85px;
+}
+/* ---------- s1_narbar ---------- */
+#s1_navbar{background-color:#cccccc;}
+
+.navbar_creekbend {
+    margin-top: 85px;
+    padding: 0;
+    background-color: #009292;
+}   
+
+.text_list {
+    font-size: 12px;
+    font-family:'Cherry Cream Soda', cursive!important;
+    text-transform: uppercase;
+    color: #313131!important;
+    text-decoration: none!important;
+    align-self: left;
+}
+
+.dropdown-menu .dropdown-item {background: white;}
+.dropdown-menu .dropdown-item:hover {background: rgba(224,224,224,.2);}
+
+/* ---------- s2_hero ---------- */
+#s2_hero{
+    background: url("images/RKOAA1.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    /* margin-top: 100px; */
+}
+
+#s2_hero {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+            
+#s2_hero aside {
+    text-align: center;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+     
+@media (max-width: 992px) {
+    #s2_hero { height: 50vh; }
+    #s2_hero .display-4{font-size: 28px;}
+    #s2_hero .display-5{font-size: 28px;}
+    #s2_hero .display-3{font-size: 40px;}
+    #s2_hero h5{font-size: 12px;}        
+}
+
+.text_creekbend {
+    font-family:'Cherry Cream Soda', cursive;
+    text-transform: uppercase;
+    color:#007575;
+    text-shadow: 1px 1px black;
+}
+
+.text_designs {
+    font-family:'Bilbo Swash Caps', cursive;
+    color:#007575;
+    text-shadow: 1px 1px black;
+}
+
+/* ---------- s3_interests ---------- */
+#s3_interests{background-color:#cccccc;}
+.card {
+    border-width: 1px;
+    border-color: #414046;
+    border-radius: 0%;
+}
+.s3_interests_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+
+@media (max-width: 768px) {
+   .s3_interests_grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 10px;
+    } 
+    
+    .s3_interests_subGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-gap: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .s3_interests_grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, auto); /* Should this be 3 */
+    }
+    
+    .s3_interests_subGrid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, auto); /* Should this be 2 */
+        grid-gap: 15px;
+    }
+}
+
+.text_plain {
+    font-family: 'Lato', sans-serif;
+    color: #999999;
+}
+
+
+
+/* ---------- s4_current_project ---------- */
+#s4_current_project{background-color:#26221f;}
+
+/* ---------- s5_about ---------- */
+#s5_about{background-color:#f0e9d7;}
+.s5_about_grid {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 10px;
+    grid-template-areas:
+        "img_about img_about img_about"
+        "hd_about hd_about hd_about"
+        "txt_about txt_about txt_about"
+        ;
+}
+.img_about {
+    grid-area:img_about;
+    grid-column: 2 / 3;
+    width: 100%;
+}
+.hd_about {
+    grid-area:hd_about;
+    text-align: center;
+}
+.txt_about {
+    grid-area:txt_about;
+    line-height: 2;
+}
+
+@media (min-width: 768px) {
+    .s5_about_grid {
+        grid-template-areas:
+            "img_about hd_about hd_about"
+            "img_about txt_about txt_about"
+            "img_about txt_about txt_about"
+        ;
+    }
+    
+    .img_about {
+        grid-column: 1 / 2;
+    }
+    .hd_about {
+        text-align: left;
+        padding-left: 20px;
+    }
+    .txt_about {
+        padding-left: 20px;
+    }
+
+}
+
+@media (min-width: 992px) {
+    .s5_about_grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-gap: 10px;
+        grid-template-areas:
+            "hd_about hd_about"
+            "txt_about img_about"
+        ;
+    }
+    
+    .img_about {
+        grid-column: 2 / 3;
+    }
+}
+
+/* ---------- s6_programming ---------- */
+#s6_programming{background-color:rgb(245, 243, 240);}
+.card {
+    border-width: 1px;
+    border-color: #414046;
+    border-radius: 0%;
+}
+.s6_programming_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+        "hd_programming hd_programming hd_programming"
+        "txt_programming txt_programming txt_programming"
+}
+@media (max-width: 768px) {
+   .s6_programming_grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 10px;
+    } 
+    
+    .s6_programming_subGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-gap: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .s6_programming_grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, auto); /* Should this be 3 */
+    }
+    
+    .s6_programming_subGrid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, auto); /* Should this be 2 */
+        grid-gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {  
+    
+    .s6_programming_grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:
+            "hd_programming hd_programming"
+            "txt_programming txt_programming"
+    
+    }
+
+    .mySubGridP {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-gap: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .s5_programming_grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:
+            "hd_programming hd_programming"
+            "txt_programming txt_programming"
+    
+    }
+
+    .mySubGridP {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, auto); /* Should this be 2 */
+        grid-gap: 15px;
+    }
+}
+
+/*     grid-gap: 10px; */
+.hd_programming {
+    grid-area:hd_programming;
+    /* text-align: left; */
+}
+.txt_programming {
+    grid-area:txt_programming;
+    line-height: 2;
+}
+
+#s6_programming .card_bg{
+/*    background-color:rgb(245, 243, 240); */
+    border: none;
+
+}
+
+
+/* ---------- s7_crafts ---------- */
+#s7_crafts{background-color:#628085;} /* 73 99 102 - 496366 --- 98 128 133 628085 */
+
+.my-crafts-container{
+    display:grid;
+    min-height: 600px;
+    background: white;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+        "one one two three three"
+        "one one four five five"
+        "six seven seven five five"
+        "six eight nine nine ten"
+        ;
+    grid-gap: 2px;    
+    border: 2px solid white;
+    outline: none;
+}
+
+#s7_crafts aside{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+}
+
+#s7_crafts .windmill{
+    width: 20%;
+    justify-self: end;
+    align-self: end;
+}
+
+#s7_crafts .craft_list {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+#s7_crafts .craft_list_item {
+    list-style-type: none;
+    text-decoration: none;
+    line-height: 2;
+}
+
+a:link, a:visited {
+    color: #007575;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  a:link:active, a:visited:active {
+    color: #007575;
+  }
+
+@media (max-width: 768px) {
+    #s7_crafts aside {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "my-crafts-area"
+            "windmill"
+            ;
+    }
+    
+    .my-crafts-area{
+        grid-area: my-crafts-area;
+    }
+    
+    .windmill{
+        grid-area:windmill;
+    }
+}
+
+@media (max-width: 576px){
+    .windmill{
+        display:none;
+    }
+}
+
+#s7_crafts ul>li {
+    color: #40a97b!important;
+  }
+
+.my-cursor {
+    cursor:pointer;
+    outline: none;
+}
+
+.crafts-1{
+    background:url("images/crafts/DSC_0237.JPG"); 
+    background-position: center; 
+    background-size: cover;
+    grid-area: one;
+}
+.crafts-2{
+    background:url("images/crafts/DSC_0612.JPG"); background-position: center; 
+    background-size: cover;
+    grid-area: two;
+}
+.crafts-3{
+    background:url("images/crafts/DSC_0313.JPG"); 
+    background-position: center; 
+    background-size: cover;
+    grid-area: three;
+}
+.crafts-4{
+    background:url("images/crafts/DSC_0518.JPG"); 
+    background-position: center; 
+    background-size: cover;
+    grid-area: four;
+}
+.crafts-5{
+    background:url("images/crafts/DSC_0604.JPG"); 
+    background-position: center; 
+    background-size: cover;
+    grid-area: five;
+}
+.crafts-6{
+    background:url("images/crafts/DSC_0251.JPG"); 
+    background-position: center; 
+    background-size: cover;
+    grid-area: six;
+}
+.crafts-7{
+    background:url("images/crafts/DSC_0318a.JPG"); background-position: center; 
+    background-size: cover;
+    grid-area: seven;
+}
+.crafts-8{
+    background:url("images/crafts/DSC_0240.JPG"); 
+    background-position: center; 
+    background-size: cover;
+    grid-area: eight;
+}
+.crafts-9{
+    background:url("images/crafts/DSC_0514.JPG"); background-position: center; 
+    background-size: cover;
+    grid-area: nine;
+}
+.crafts-10{
+    background:url("images/crafts/IMG_6262.JPG"); background-position: center; 
+    background-size: cover;
+    grid-area: ten;
+}
+
+
+#s7_diy{background-color:#f0e9d7;}
+#s8_contact{background-color:#fefaf7;}
+#s9_footer{background-color:#414046;}
+#s10_copyright{background-color:#000;}
+
+
+
+/* ---------- s7_diy ---------- */
+
+/* See s5_programming CSS above */
+
+/* ---------- s8_contact ---------- */
+
+.contact-copy{grid-area: contact-copy;}
+.contact-map{grid-area: contact-map;}
+.contact-picture{grid-area: contact-picture;}
+
+.contacts_grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-template:
+        "contact-copy contact-map contact-map"
+        "contact-picture contact-map contact-map"
+        ;
+}
+
+@media (max-width: 768px) {
+    .contacts_grid{
+        grid-template-columns: repeat(2, auto);
+        grid-auto-rows: repeat(3, auto);
+        grid-template:
+            "contact-picture contact-copy"
+            "contact-map contact-map"
+            "contact-map contact-map"
+        ;
+        
+    }    
+    .contacts-picture{
+        justify-self: end;
+    }
+}
+
+@media (max-width: 576px) {
+    .contacts_grid{
+        grid-template-columns: auto;
+        grid-auto-rows: repeat(4, auto);
+        grid-template:
+            "contact-picture"
+            "contact-copy"
+            "contact-map"
+            "contact-map"
+        ;
+        
+    }    
+    .contacts-picture{
+        transform: scaleX(-1);
+        justify-self: center;
+    }
+    .contacts-copy{
+        text-align: center;
+    }
+}
+
+
+
+
+/* ---------- s9_footer ---------- */
+
+.s9_footer_grid{
+    font-size: small;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, auto);
+    grid-gap: 10px;
+    grid-template-areas: 
+        "footer_hours"
+        "footer_menu"
+        "footer_museum"
+        "footer_painting_names"
+        "footer_links"
+        "footer_img"
+    ;
+}
+
+.footer_museum h1{
+    text-align: center;
+}
+
+.footer_museum, .footer_links{
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.footer_img{
+    width:50%;
+    justify-self: flex-end;
+}
+
+.footer_hours {
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .footer_menu, .footer_museum, .footer_painting_names, .footer_links {
+        border-top: 1px dashed black;
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .footer_img{
+        transform: scaleX(-1);
+    }
+    
+    .footer_hours{
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .s9_footer_grid{
+        font-size: initial;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "footer_hours footer_img"
+            "footer_menu footer_museum"
+            "footer_painting_names footer_links"
+            ;
+    }
+    
+    .footer_museum, .foot_links, .footer_links h1{
+        flex:none;
+        padding-top:0;
+        text-align: left;
+    }
+    
+    .footer_img{
+        width: 50%;
+        justify-self: flex-end;
+    }
+}
+/* ---------- s10_copyright ---------- */
+
