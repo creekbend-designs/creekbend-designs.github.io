@@ -171,19 +171,16 @@ nav a:link:active { background-color: rgba(0,0,0,0.2);}
     border-radius: 0%;
     box-shadow: 1px 1px 5px rgba(0,0,0,0.4);
 }
-
 #s3_interests .card img {
     border-color: #dddddd;
     border-radius: 0%;
     box-shadow: 1px 1px 5px rgba(0,0,0,0.4);
 }
-
 .s3_interests_grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(1, 1fr);
 }
-
 @media (max-width: 768px) {
    .s3_interests_grid {
         grid-template-columns: repeat(1, 1fr);
@@ -198,7 +195,6 @@ nav a:link:active { background-color: rgba(0,0,0,0.2);}
         grid-gap: 15px;
     }
 }
-
 @media (max-width: 576px) {
     .s3_interests_grid {
         grid-template-columns: repeat(1, 1fr);
@@ -291,18 +287,14 @@ nav a:link:active { background-color: rgba(0,0,0,0.2);}
 .s6_programming_grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-    grid-template-areas:
-        "hd_programming hd_programming hd_programming"
-        "txt_programming txt_programming txt_programming"
+    grid-template-rows: repeat(1, 1fr);
 }
 @media (max-width: 768px) {
    .s6_programming_grid {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(3, 1fr);
         grid-gap: 10px;
-    } 
-    
+    }     
     .s6_programming_subGrid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -310,7 +302,6 @@ nav a:link:active { background-color: rgba(0,0,0,0.2);}
         grid-gap: 15px;
     }
 }
-
 @media (max-width: 576px) {
     .s6_programming_grid {
         grid-template-columns: repeat(1, 1fr);
@@ -324,55 +315,14 @@ nav a:link:active { background-color: rgba(0,0,0,0.2);}
         grid-gap: 15px;
     }
 }
-
-@media (max-width: 768px) {  
-    
-    .s6_programming_grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, auto);
-        grid-template-areas:
-            "hd_programming hd_programming"
-            "txt_programming txt_programming"
-    
-    }
-
-    .mySubGridP {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(1, 1fr);
-        grid-gap: 15px;
+@media (max-width: 410px) {
+    .hd_programming {
+        font-size: 2rem;
     }
 }
-
-@media (max-width: 576px) {
-
-    .s5_programming_grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, auto);
-        grid-template-areas:
-            "hd_programming hd_programming"
-            "txt_programming txt_programming"
-    
-    }
-
-    .mySubGridP {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(3, auto); /* Should this be 2 */
-        grid-gap: 15px;
-    }
+.img-fluid {
+    width: 100%;
 }
-
-/*     grid-gap: 10px; */
-.hd_programming {
-    grid-area:hd_programming;
-    /* text-align: left; */
-}
-.txt_programming {
-    grid-area:txt_programming;
-    line-height: 2;
-}
-
 #s6_programming .card_bg{
 /*    background-color:rgb(245, 243, 240); */
     border: none;
