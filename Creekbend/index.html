@@ -10,19 +10,18 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Cherry+Cream+Soda&family=Lato&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/6909af91d8.js" crossorigin="anonymous"></script>
+  <!--<script src="https://kit.fontawesome.com/6909af91d8.js" crossorigin="anonymous"></script>-->
 
   <link rel="icon" type="image/png" href="images/CDlogo.png" />
   <link rel="stylesheet" href="mystyles.css">
-  <!--<link rel="stylesheet" href="css/styles.css">-->
-    
+
   <title id="title">Creekbend Designs</title>
 </head>
 
 <body id="top">
 
   <!-- s0_header -->
-  <section id="s0_header" class="fixed-top">
+  <section id="s0_header">
     <div id="s0_header_grid">
       <aside class="creek_nav">
       </aside>
@@ -35,54 +34,46 @@
 
   <!-- s1_navbar -->
   <section id="s1_navbar">
-  <nav class="navbar_creekbend navbar navbar-expand-sm">
+  <nav class="navbar_creekbend navbar navbar-expand-sm navbar-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="no-gutters collapse navbar-collapse justify-content-between" id="navbarNav">
-      <ul class="navbar-nav nav-md">
+
+    <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
         <li class="nav-item active"><a class="nav-link text_list" href="index.html">Home</a></li>
         <li class="nav-item dropdown"><a class="nav-link dropdown-toggle text_list" role="button" data-toggle="dropdown">Interests</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item text_list" href="#s2_interests">All</a>
+            <a class="dropdown-item text_list" href="#s3_interests">All</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item text_list" href="#s5_programming">Programming</a>
-            <a class="dropdown-item text_list" href="#s6_crafts">Crafts</a>
-            <a class="dropdown-item text_list" href="#s7_diy">DIY</a>
-            <a class="dropdown-item text_list" href="#s3_current_project">Current Project</a>
+            <a class="dropdown-item text_list" href="#s6_programming">Programming</a>
+            <a class="dropdown-item text_list" href="#s7_crafts">Crafts</a>
+<!--            <a class="dropdown-item text_list" href="Crafts/crafts.html">. . . More Crafts</a>-->
+            <a class="dropdown-item text_list" href="#s8_diy">DIY Projects</a>
+            <a class="dropdown-item text_list" href="#s4_current_project">Current Project</a>
           </div>
         </li>
-        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle text_list" role="button" data-toggle="dropdown">Creekbend</a>
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle text_list" role="button" data-toggle="dropdown">@ the Creekbend</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item text_list" href="#s4_about">About</a>
+            <a class="dropdown-item text_list" href="#s5_about">About</a>
+            <a class="dropdown-item text_list" href="Dashboard/index.html">Dashboard</a>
+            <!--
+            <a class="dropdown-item text_list" href="Dashboard/index.html">The Boys</a>
             <a class="dropdown-item text_list" href="#s8_contacts">Contact</a>
             <a class="dropdown-item text_list" href="#s9_footer">Site Info</a>
+            -->
             </div>
         </li>
         <li class="nav-item"><a class="nav-link text_list" href="https://www.etsy.com/shop/CreekbendDesignsCo" target="_blank">Etsy Shop</a></li>
-        <li class="nav-item"><a class="nav-link text_list" href="Weather/index.html" target="_blank">Weather</a></li>
-        <li class="nav-item"><a class="nav-link text_list" href="#">My Boys</a></li>
         </ul>
     </div>
-	<div id="weather" class="text_list">Current Conditions</div>
-	<div><span><img id="icon"></span></div>
-	<div id="temperature" class="text_list">70</div>
-	</nav>
-
-  <!--
-  <nav>
-    <div class="row no-gutters limited">
-    <button id="hamburgerBtn">&#9776;</button>
-    <ul id="primaryNav">
-        <li class="active"><a href="index.html">Specials</a></li>
-        <li><a href="cheeseCakes.html">Cheese Cakes</a></li>
-        <li><a href="fruitPies.html">Fruit Pies</a></li>
-        <li><a href="#">Swag Shop</a></li>
-    </ul>
-        </div> <!-- end row -->
-<!--</nav>
--->
-
+  
+    <div id="forecast" class="align-right">
+	    <span id="weather" class="text_list">Current Conditions</span>
+	    <span><img id="icon"></span>
+      <span id="temperature" class="text_list">70</span>
+    </div>
+  </nav>
   </section> <!-- s1_navbar -->
 
   <!-- s2_hero -->
@@ -95,8 +86,10 @@
   </section> <!-- s2_hero -->
 
   <!-- s3_interests -->
-  <section id="s3_interests">
-    <div class="container py-5 s3_interests_grid">
+  <section class="py-5" id="s3_interests">
+    <div class="container py-5">
+      <h1 class="text_designs display-3">Interests</h1>
+    <div class="s3_interests_grid">
 
  <!--
       <div class="card mx-2">
@@ -114,7 +107,7 @@
 -->
       <div class="card mx-2">
         <div class="card-body s3_interests_subGrid">
-            <img class="img-fluid border border-dark" src="images/main/s2_programming.png" alt="Programming">
+            <a href="#s6_programming"><img class="img-fluid border border-dark" src="images/main/s2_programming.png" alt="Programming"></a>
           <aside>
               <h2 class="text_creekbend my-2 h5">Programming</h2>
             <p>Working professionally for over 16 years, I was responsible for ftp servers, web servers, web design and databases. For fun and learning, I have created a few personal websites, apps and games.
@@ -125,7 +118,7 @@
 
       <div class="card mx-2">
         <div class="card-body s3_interests_subGrid">
-           <img class="img-fluid border border-dark" src="images/main/s2_crafts.JPG" alt="Crafts">
+           <a href="#s7_crafts"><img class="img-fluid border border-dark" src="images/main/s2_crafts.JPG" alt="Crafts"></a>
            <aside>
               <h2 class="text_creekbend my-2">Crafts</h2>
               <p>My interests run from paper crafts like scrapbooking and mixed media collage to rock painting, stained glass, sewing and general cutting and gluing.</p>
@@ -135,19 +128,25 @@
            
       <div class="card mx-2">
         <div class="card-body s3_interests_subGrid">
-           <img class="img-fluid border border-dark" src="images/main/s2_diy.png" alt="DIY">
+           <a href="#s8_diy"><img class="img-fluid border border-dark" src="images/main/s2_diy.png" alt="DIY"></a>
            <aside>
-              <h2 class="text_creekbend my-2">DIY</h2>
-              <p>Garden bench, corn hole, murphy bed, gardens...</p>
+              <h2 class="text_creekbend my-2 h5">DIY Projects</h2>
+              <p>I am a pretty frugal person, so I/we love figuring out ways to do it ourselves, use our resources and "make stuff" like barn doors, garden bench, corn hole game, Xeriscape garden, a murphy bed...</p>
            </aside>
         </div>
       </div>
-           
+  
+    </div>  
     </div>                        
   </section> <!-- s3_interests -->
 
   <!-- s4_current_project -->
-
+  <section class="py-5" id="s4_current_project">
+    <div class="container">
+      <img src="images/crafts/DSC_0228.JPG">
+    </div>
+  </section>
+ 
   <!-- s5_about -->
   <section class="py-5" id="s5_about">
     <div class="container py-5 s5_about_grid">
@@ -155,7 +154,7 @@
         <img class="img-fluid" src="images/main/s4_about.png" alt="Creekbend">
       </div>
       <div class="hd_about">
-        <h1 class="text_designs">About</h1>
+        <h1 class="text_designs display-3">About</h1>
       </div>
       <div class="txt_about">
         <p>After 4 long years we finally completed building our house and moved to the <strong>Creekbend</strong> where we continued with house projects, crafting and creating. At first glance it appears that this is a very diverse set of interests however I have realized this all comes down to one idea. <strong>Making stuff is fun!</strong></p>
@@ -171,11 +170,11 @@
     </div>
     <div class="card-deck txt_programming myGrid">
       <div class="card mx-2 card_bg">
-        <a href="../House9292-grid/index.html" target="_blank"><img class="img-fluid" src="images/main/s5_house.png" alt=""></a>
+        <a href="../House9292/index.html" target="_blank"><img class="img-fluid" src="images/main/s5_house.png" alt=""></a>
         <div class="card-body mySubGrid">
           <aside>
             <h2 class="text_creekbend my-2 h5">House Build</h2>
-            <p>This is a website I created devoted to the chronicling of building our house. However, it is currently still a work in progress. I thought I would want to detail the 4 year saga in detail, but turns out I'm not yet ready to relive it!
+            <p>This is a website I created devoted to the chronicling of building our house. However, the site is currently still a work in progress. I thought I would want to detail the 4 year saga, but it turns out I'm not yet ready to relive it! So this site is merely an outline of what I plan to include when I'm emotionally ready.
             </p>
           </aside>
         </div>
@@ -186,13 +185,13 @@
          <div class="card-body mySubGrid">
            <aside>
               <h2 class="text_creekbend my-2 h5">ASPS Quote Generator</h2>
-              <p>I was asked to create a rudimentary price quote calculator for a print shop. This site is also still a work in progress as I am waiting for a little more info.</p>
+              <p>I was asked to create a rudimentary price quote calculator for a printing shop. This site is also still a work in progress.</p>
             </aside>
         </div>
       </div>
          
       <div class="card mx-2 card_bg">
-        <a href="" target="_blank"><img class="img-fluid" src="images/main/s5_mastermind.png" alt=""></a>
+        <img class="img-fluid" src="images/main/s5_mastermind.png" alt="">
          <div class="card-body mySubGrid card_bg">
            <aside>
               <h2 class="text_creekbend my-2 h5">Master Mind</h2>
@@ -207,6 +206,7 @@
   <!-- s7_crafts -->
   <section class="py-5" id="s7_crafts">
     <div class="container py-5">
+      <!--<h1 class="text_designs display-3">Crafts...and <a href="Crafts/crafts.html">more</a></h1>-->
       <h1 class="text_designs display-3">Crafts</h1>
       <aside>
         <div class="my-crafts-container my-crafts-area">
@@ -220,7 +220,14 @@
         <div class="crafts-8"></div>
         <div class="crafts-9"></div>
         <div class="crafts-10"></div>
-        <div>
+        <!--
+        <div class="crafts-11"></div>
+        <div class="crafts-12"></div>
+        <div class="crafts-13"></div>
+        <div class="crafts-14"></div>
+        <div class="crafts-15"></div>
+        -->
+   <!--     
         <ul class="craft_list text_creekbend">
           <li><a class="craft_list_item text_creekbend" href="Crafts/crafts.html">Scrapbooking</a></li>
           <li><a class="craft_list_item text_creekbend" href="#">Mixed Media Collage</a></li>
@@ -230,39 +237,38 @@
           <li><a class="craft_list_item text_creekbend" href="#">Crab Paisley</a></li>
           <li><a class="craft_list_item text_creekbend" href="#">Stained Glass</a></li>
         </ul>
+      -->       
          
 <!--               <img class="img-fluid windmill" src="images/crafts/scissors.jpg" alt="Windmill"> -->
          <!--      <img class="img-fluid windmill" src="images/crafts/DSC_0251a.jpg" alt="Windmill"> -->
-      </aside>
+    </aside>
     </div>
   </section> <!-- s7_crafts -->
    
-
-<!--      
-<nav class="navbar navbar-expand-sm navbar-light bg-light">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="no-gutters collapse navbar-collapse justify-content-between" id="navbarNav">
-      <ul class="navbar-nav nav-md">
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.etsy.com/shop/CreekbendDesignsCo" target="_blank">Etsy Shop</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">My Boys</a>
-          </li>
-        </ul>
+  <section class="py-5" id="s8_diy">
+    <div class="container py-5">
+        <h1 class="text_creekbend">DIY Projects</h1>
+        <div class="my-thumbs">
+            <img class="img-fluid" src="images/diy/IMG_20190923_204026631.jpg" alt="">
+            <img class="img-fluid" src="images/diy/IMG_20190923_204054602.jpg" alt="">
+            <img class="img-fluid" src="images/diy/IMG_20191026_095825361_HDR.jpg" alt="">
+            <img class="img-fluid" src="images/diy/IMG_20200703_155245242.jpg" alt="">
+            <a href="#" data-toggle="modal" data-target="#prints1">
+              <img class="img-fluid" src="images/diy/5928700761.jpg" alt=""></a>
+              <img class="img-fluid" src="images/diy/IMG_20200414_154144276.jpg" alt="">
+              <img class="img-fluid" src="images/diy/IMG_20200606_100456075_HDR.jpg" alt="">
+              <img class="img-fluid" src="images/diy/IMG_20200331_084751122.jpg" alt="">
+            <img class="img-fluid" src="images/diy/IMG_20200604_101002067.jpg" alt="">
+            <img class="img-fluid" src="images/diy/IMG_20200605_191941806.jpg" alt="">
+            <img class="img-fluid" src="images/diy/IMG_20200605_201033428.jpg" alt="">
+            <img class="img-fluid" src="images/diy/IMG_20200609_131917874_HDR.jpg" alt="">
+            <img class="img-fluid my-bk-image" src="img/interface-imgs/s5-prints.png" alt="">
+        </div>
     </div>
-  </nav>
+</section>
 
-  -->    
-<footer style="display:none">
+<!--
+<footer id="s9_footer" style="display:none">
 <div class="container mt-4 pt-3">
   <div class="row">
     <div class="col-12 col-md-6 col-xl-3">
@@ -273,7 +279,7 @@
         <li></li>
         </ul>
     </div> <!-- end column -->
-      <div class="col-12 col-md-6 col-xl-3">
+  <!--    <div class="col-12 col-md-6 col-xl-3">
         <h2>Company</h2>
         <ul>
         <li></li>
@@ -282,7 +288,7 @@
         <li></li>
         </ul>
     </div> <!-- end column -->
-      <div class="col-12 col-md-6 col-xl-3">
+<!--      <div class="col-12 col-md-6 col-xl-3">
         <h2>Social</h2>
         <ul>
         <li>Facebook</li>
@@ -290,24 +296,31 @@
         <li></li>
         </ul>
     </div> <!-- end column -->
-      <div class="col-12 col-md-6 col-xl-3">
+ <!--     <div class="col-12 col-md-6 col-xl-3">
         <h2>About Us</h2>
         <img src="images/CDlogo.png" height="85" alt="logo">
         <p>&copy; 2020 &bull; all rights reserved.</p>
     </div> <!-- end column -->
-  </div><!-- end row -->
-</div><!-- end container -->
-</footer>
-    
+ <!-- </div><!-- end row -->
+<!--</div><!-- end container -->
+<!--</footer>
+-->  
+</body>
 
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<!-- jQuery first then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 <script>
   $('.navbar-collapse-- a').click(function(){
       $(".navbar-collapse").collapse('hide');
   });
 </script>
 <script src="Weather/js/weather.js"></script>
-</body>
+<
 </html>

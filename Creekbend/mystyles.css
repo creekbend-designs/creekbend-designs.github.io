@@ -1,27 +1,71 @@
+*{margin:0; padding:0;}
+
 /* ---------- s0_header ---------- */
 #s0_header{background-color: #eeeeee;}
+#s0_header {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: 99;
+}
 #s0_header_grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(1, 1fr);
 }
 #s0_header_grid .creek_nav{
-    grid-column: 1 / 4;
+    grid-column: 1 / 2;
 }
-
 #s0_header_grid .creek_logo{
-    grid-column: 4 / 5;
+    grid-column: 3 / 4;
     align-content: right;
 }
-
 #s0_header_grid img{
     height: 85px;
 }
+@media (max-width: 768px) {
+    #s0_header_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #s0_header_grid .creek_nav{
+        display: none;
+    }    
+    #s0_header_grid .creek_logo{
+        grid-column: 2 / 1
+    }
+}
+@media (max-width: 576px) {
+    #s0_header_grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #s0_header_grid .creek_logo{
+        grid-column: 1 / 2
+    }
+    /*
+    #s0_header_grid img {
+        height: 50px;
+    }
+    */
+}
+
 /* ---------- s1_narbar ---------- */
-#s1_navbar{background-color:#cccccc;}
+#s1_navbar{background-color:#009292;}
+#s1_navbar{
+    position: fixed;
+    top:85px;
+    left:0;
+    width: 100%;
+    height: 34px;
+    z-index: 99;
+}
+.navbar-toggler-icon {
+    width: 1.2em!important;
+    height: 1.2em!important;
+    background-size: 75% 75%!important; 
+}
 
 .navbar_creekbend {
-    margin-top: 85px;
     padding: 0;
     background-color: #009292;
 }   
@@ -35,8 +79,29 @@
     align-self: left;
 }
 
-.dropdown-menu .dropdown-item {background: white;}
-.dropdown-menu .dropdown-item:hover {background: rgba(224,224,224,.2);}
+nav li.active { background-color: rgba(0,0,0,0.2);}
+nav a:hover { background-color: rgba(0,0,0,0.1);}
+nav a:link:active { background-color: rgba(0,0,0,0.2);}
+.dropdown-menu .dropdown-item:hover {background: rgba(0, 0, 0, .1);}
+
+#forecast {
+/*     padding: 0px 10px 10px 10px; */
+    height: 34px;
+}
+#forecast img {
+    padding: 0;
+    margin: 0;
+}
+@media (max-width: 768px) {
+    #forecast {
+        display: none;
+    }
+}
+@media (max-width: 576px) {
+    #forecast {
+        display: block;
+    }
+}
 
 /* ---------- s2_hero ---------- */
 #s2_hero{
@@ -45,27 +110,43 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    margin-top: 118px;
+    width: 100%;
     /* margin-top: 100px; */
 }
-
 #s2_hero {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
-}
-            
+}           
 #s2_hero aside {
     text-align: center;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-}
-     
+}    
 @media (max-width: 992px) {
-    #s2_hero { height: 50vh; }
+    #s2_hero { height: 75vh; width: 100% }
     #s2_hero .display-4{font-size: 28px;}
     #s2_hero .display-5{font-size: 28px;}
     #s2_hero .display-3{font-size: 40px;}
     #s2_hero h5{font-size: 12px;}        
+}
+@media (max-width: 576px) {
+    /* #s2_hero { height: 75vh; width: 100%; } */
+    #s2_hero .display-4{font-size: 20px;}
+    #s2_hero .display-5{font-size: 20px;}
+    #s2_hero .display-3{font-size: 40px;}
+    #s2_hero h5{font-size: 12px;}        
+    #s2_hero {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }           
+    #s2_hero aside {
+        text-align: center;
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }    
 }
 
 .text_creekbend {
@@ -83,11 +164,20 @@
 
 /* ---------- s3_interests ---------- */
 #s3_interests{background-color:#cccccc;}
-.card {
+#s3_interests .card {
     border-width: 1px;
-    border-color: #414046;
+/*    border-color: #414046; */
+    border-color: #dddddd;
     border-radius: 0%;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.4);
 }
+
+#s3_interests .card img {
+    border-color: #dddddd;
+    border-radius: 0%;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+}
+
 .s3_interests_grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -128,13 +218,16 @@
     color: #999999;
 }
 
-
-
 /* ---------- s4_current_project ---------- */
 #s4_current_project{background-color:#26221f;}
 
+#s4_current_project img {
+    width: 100%;
+}
+
 /* ---------- s5_about ---------- */
 #s5_about{background-color:#f0e9d7;}
+#s5_about{background-color: rgba(98, 128, 133, .3);} /* 73 99 102 - 496366 --- 98 128 133 628085 */
 .s5_about_grid {
     display:grid;
     grid-template-columns: repeat(3, 1fr);
@@ -148,7 +241,6 @@
 }
 .img_about {
     grid-area:img_about;
-    grid-column: 2 / 3;
     width: 100%;
 }
 .hd_about {
@@ -168,10 +260,6 @@
             "img_about txt_about txt_about"
         ;
     }
-    
-    .img_about {
-        grid-column: 1 / 2;
-    }
     .hd_about {
         text-align: left;
         padding-left: 20px;
@@ -179,7 +267,6 @@
     .txt_about {
         padding-left: 20px;
     }
-
 }
 
 @media (min-width: 992px) {
@@ -191,10 +278,6 @@
             "hd_about hd_about"
             "txt_about img_about"
         ;
-    }
-    
-    .img_about {
-        grid-column: 2 / 3;
     }
 }
 
@@ -311,6 +394,7 @@
         "one one four five five"
         "six seven seven five five"
         "six eight nine nine ten"
+        /*" eleven twelve thirteen fourteen fifteen"*/
         ;
     grid-gap: 2px;    
     border: 2px solid white;
@@ -439,20 +523,58 @@ a:link, a:visited {
     background-size: cover;
     grid-area: ten;
 }
-
-
-#s7_diy{background-color:#f0e9d7;}
-#s8_contact{background-color:#fefaf7;}
-#s9_footer{background-color:#414046;}
-#s10_copyright{background-color:#000;}
+/*
+.crafts-11{
+    background:url("images/crafts/IMG_20200723_074701781.jpg"); background-position: center; 
+    background-size: cover;
+    grid-area: eleven;
+}
+.crafts-12{
+    background:url("images/crafts/IMG_20191223_082954405.jpg"); background-position: center; 
+    background-size: cover;
+    grid-area: twelve;
+}
+.crafts-13{
+    background:url("images/crafts/IMG_20191223_082957501.jpg"); background-position: center; 
+    background-size: cover;
+    grid-area: thirteen;
+}
+.crafts-14{
+    background:url("images/crafts/IMG_20191223_083000881.jpg"); background-position: center; 
+    background-size: cover;
+    grid-area: fourteen;
+}
+.crafts-15{
+    background:url("images/crafts/IMG_20190728_105242972_HDR.jpg"); background-position: center; 
+    background-size: cover;
+    grid-area: fifteen;
+}
+*/
 
 
 
 /* ---------- s7_diy ---------- */
+#s8_diy{background-color:#26221f;}
+#s8_diy{background-color: rgba(38,34,31,.7)}
 
-/* See s5_programming CSS above */
+.my-thumbs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+    justify-items: center;
+}
+
+.my-thumbs img {
+    display: block;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+}
+
+.my-thumbs .my-bk-image{
+    box-shadow: none;
+}
 
 /* ---------- s8_contact ---------- */
+#s8_contact{background-color:#fefaf7;}
 
 .contact-copy{grid-area: contact-copy;}
 .contact-map{grid-area: contact-map;}
@@ -510,6 +632,7 @@ a:link, a:visited {
 
 
 /* ---------- s9_footer ---------- */
+#s9_footer{background-color:#414046;}
 
 .s9_footer_grid{
     font-size: small;
@@ -587,4 +710,5 @@ a:link, a:visited {
     }
 }
 /* ---------- s10_copyright ---------- */
+#s10_copyright{background-color:#000;}
 

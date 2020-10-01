@@ -1,0 +1,583 @@
+
+.text_house {
+    color:#e5904d;
+    text-transform: uppercase;
+    /* text-shadow: 1px 1px black; */
+}
+.text_gray {
+    color: #808080;
+    text-transform: uppercase;
+}
+.text_dkgray {
+    color: #404040;
+    text-transform: uppercase;    
+}
+
+#s1_header_story{background-color:#FFFFFF;}
+#s2_paperwork{background-color:#FFFFFF;}
+#s3_phases{background-color:#FFFFFF;}
+#s4_timelapse{background-color:#FFFFFF;}
+
+/* s0_navbar */
+.header-nav--nav {border: 0; border-bottom: 1px solid #a0a0a0; margin-bottom: 0;}
+
+.header-nav--nav .header-nav--main ul {margin: 10px 0 10px;}
+.header-nav--nav .header-nav--main ul li.nav-item {font-size: 14px; text-transform: uppercase; font-weight: 700; letter-spacing: 0.2px; padding-bottom: 10px;}
+.header-nav--nav .header-nav--main ul li.nav-item:after {content: ""; display: inline-block; width: 15px;}
+.header-nav--nav .header-nav--main ul li.nav-item:last-child:after {width: 0;}
+.header-nav--nav .header-nav--main ul li.nav-item a {padding: 0;}
+
+.header-nav--nav .header-nav--main .form-inline input.form-control {width: 330px; height: 30px; margin: 0; box-shadow: none;}
+.header-nav--nav .header-nav--main .form-inline .btn-default {background: #a0a0a0; position: relative; border: 0; border-radius: 0; font-weight: 300; width: 100px; height: 30px; min-width: auto; top: 0; left: -3px;}
+
+.header-nav--nav .navbar-brand {padding: 0; width: 100%;}
+.header-nav--nav .navbar-brand a {display: block; width: 170px;}
+
+.header-nav--nav .navbar-collapse {padding-right: 0;}
+
+@media only screen and (min-width: 768px) {
+    .header-nav--nav .navbar-collapse.collapse {flex: 1; display: flex !important;}
+    .header-nav--nav .navbar-brand {padding: 0; width: auto; margin-right: 0;}
+    .header-nav--nav .navbar-brand a {display: block; width: 120px;}
+    .header-nav--nav .header-nav--main ul {margin-bottom: 0;}
+    .header-nav--nav .header-nav--main ul li.nav-item {font-size: 13px; padding-bottom: 0;}
+    .header-nav--nav .header-nav--main ul li.nav-item:after {width: 8px;}
+}
+
+@media only screen and (min-width: 992px) {
+    .header-nav--nav .header-nav--main ul li.nav-item {font-size: 16px;}
+    .header-nav--nav .navbar-brand {margin-right: 40px;}
+    .header-nav--nav .navbar-brand a {display: block; width: 170px;}
+    .header-nav--nav .header-nav--main ul li.nav-item:after {width: 15px;}
+}
+
+/* ---------- s1_header_story ---------- */
+
+/* #s1_header_story{
+    background: url("images/timelapse1.JPG");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 75vh;
+    width: 100%;
+    margin: 116px;
+}
+
+#s1_header_story {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+            
+#s1_header_story aside {
+    text-align: center;
+    grid-column: 2 / 4;
+    grid-row: 4 / 5;
+}
+            
+@media (max-width: 992px) {
+    #s1_header_story { height: 50vh; }
+    #s1_header_story .display-4{font-size: 28px;}
+    #s1_header_story h5{font-size: 12px;}        
+}
+     
+*/
+
+
+/* s1_header_story */
+.house_hero {
+    background-image: url("images/mainin1.jpg"); 
+    background-repeat: no-repeat; 
+    height: 400px; 
+    background-size: cover; 
+    background-position: center center; 
+    text-align: center;
+    margin-top: 112px;
+}
+.house_hero h1, .house_hero h2 {
+    font-size: 63px; 
+    font-weight: 700; 
+    margin: 0; 
+    flex: inherit; 
+    line-height: 0.9;
+}
+.house_hero h1 {left: -30px;}
+.house_hero h2 {color: #faa541;}
+.house_hero p.lead {letter-spacing: 2px; font-weight: 700;}
+
+@media only screen and  (min-width: 1200px) {
+    .house_hero .container {max-width: 1170px;}
+}
+@media only screen and (max-width: 768px) {
+    .house_hero {margin-bottom: 0; padding-bottom: 0; background-position: 70% 0; background-size: 180%;}
+    .house_hero .container {margin-top: auto; background-color: #faa541; padding: 15px;}
+    .house_hero h1 {left: 0;}
+    .house_hero h2 ,  .house_hero p.lead {color: white;}
+    .house_hero p.lead {margin-top: 5px; margin-bottom: 0;}
+}
+@media only screen and (max-width: 480px) {
+    .house_hero h1, .house_hero h2 {font-size: 55px;}
+}
+
+/* ---------- s2_paperwork ---------- */
+
+#s2_paperwork .card {
+    border: none;
+}
+.myGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+
+@media (max-width: 768px) {
+   .myGrid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 10px;
+    } 
+    
+    .mySubGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-gap: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .myGrid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, auto); /* Should this be 3 */
+    }
+    
+    .mySubGrid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, auto); /* Should this be 2 */
+        grid-gap: 15px;
+    }
+}
+
+/* s2_paperwork */
+.s2_paperwork {margin-top: 55px; margin-bottom: 55px;}
+.s2_paperwork--container {width: 100%; border-top: 1px solid #a0a0a0; border-bottom: 1px solid #a0a0a0; padding: 25px 0; margin-left: 15px; margin-right: 15px; text-align: center; position: relative; overflow: hidden;}
+.s2_paperwork--container img {width: 250px;}
+.s2_paperwork--text > div {font-size: 30px; font-weight: 700; text-transform: uppercase; line-height: 1;}
+.s2_paperwork--text > div:last-child {font-size: 16px; font-weight: 400; margin-top: 5px;}
+
+@media only screen and (max-width: 1024px) {
+    .s2_paperwork--text > div {font-size: 24px;}
+    .s2_paperwork--container img {width: 220px;}
+}
+@media only screen and (max-width: 768px) {
+    .s2_paperwork {margin-top: 0;}
+    .s2_paperwork--container {flex-wrap: wrap; margin-left: 0; margin-right: 0; border-bottom-color: transparent;}
+    .s2_paperwork--text > div:last-child {margin-top: 2px;}
+    .s2_paperwork--container img:nth-of-type(1) {left:0; top: 0;}
+    .s2_paperwork--container img:nth-of-type(2) {top: 0; right:  0;}
+    .s2_paperwork--container img {width: 250px; position: absolute; mix-blend-mode: multiply;}
+    .s2_paperwork--text {flex: 0 0 100%; margin-top: 250px;}
+}
+@media only screen and (max-width: 640px) {
+    .s2_paperwork--container img:nth-of-type(1) {left: -15%;}
+    .s2_paperwork--container img:nth-of-type(2) {right:  -15%;}
+}
+@media only screen and (max-width: 480px) {
+    .order-sm-0 {order: 0;}
+    .order-sm-1 {order: 1;}
+    .order-sm-2 {order: 2;}
+    .s2_paperwork--container img {width: 220px;}
+    .s2_paperwork--text {margin-top: 180px;}
+}
+
+
+/* ---------- s3_phases ---------- */
+
+.house_phases a > div {color: #364147;}
+.house_phases .house_phases--text {padding: 30px 0; text-transform: uppercase; text-align: center;}
+.house_phases .house_phases--text > div {font-size: 16px; font-weight: 200; color: #faa541;}
+.house_phases .house_phases--text h3 {font-size: 30px; font-weight: 700; line-height: 1; margin: 0;}
+.house_phases .house_phases--image img {width: 100%;}
+
+@media only screen and (max-width: 991px) {
+    .house_phases  .house_phases--image {height: 180px; overflow: hidden; position: relative;}
+    .house_phases .house_phases--image img {position: relative; top: 50%; transform: translateY(-50%);}
+}
+
+/* ---------- s4_timelapse ---------- */
+.house_full-banner {margin-top: 50px; margin-bottom: 50px;}
+.house_full-banner .row {position: relative;}
+.house_full-banner .row:before {content: ""; position: absolute; border: 1px solid white; display: block; top: 30px; bottom: 30px; left: 50px; right: 50px; z-index: 1;}
+.house_full-banner .house_full-banner--image {
+    flex: 0 0 58.333333%;
+    background-image: url('https://www.pluralsight.com/content/dam/pluralsight2/teach/author-tools/carved-rock-fitness/img-vistas.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    min-height: 400px;
+}
+.house_full-banner .house_full-banner--text {flex: 0 0 41.666667%; background: #364147; text-transform: uppercase; padding: 30px; position: relative;}
+.house_full-banner .house_full-banner--text h4 {font-size: 40px; font-weight: 700; color: #637f94; font-style: italic; line-height: 1; margin: 0;}
+.crf-full-banner .house_full-banner--text h4:after {content: ""; width: 100px; height: 1px; background: #faa541; margin: 20px auto; display: block;}
+.house_full-banner .house_full-banner--text  > div {color: white;}
+.house_full-banner .house_full-banner--text  > div:nth-of-type(1) {font-size: 60px; font-weight: 700; line-height: 1;}
+.house_full-banner .house_full-banner--text  > div:nth-of-type(2) {font-size: 25px; font-weight: 200; letter-spacing: 3px;}
+.house_full-banner .house_full-banner--text .btn.btn-default {text-transform: none; margin-top: 50px; text-transform: uppercase; letter-spacing: 1px; z-index: 1;}
+
+@media only screen and (max-width: 991px) {
+    .house_full-banner .col {position: relative; flex-direction: column;}
+    .house_full-banner .house_full-banner--text  {padding: 30px 30px 50px;}
+    .house_full-banner .house_full-banner--text h4 {display: none;}
+    .house_full-banner .house_full-banner--text .btn.btn-default {margin-top: 20px;}
+    .crf-full-banner .house_full-banner--image {min-height: 300px;}
+    .house_full-banner .house_full-banner--image h4 {font-size: 40px; font-weight: 700; color: #637f94; font-style: italic; line-height: 1; margin: 0; text-align: center; top: 50px; position: relative; text-transform: uppercase;}
+}
+@media only screen and (max-width: 768px) {
+    .house_full-banner .col {padding-left: 0; padding-right: 0;}
+    .house_full-banner .row:before {left: 30px; right: 30px;}
+}
+
+
+
+/* ---------- s4_about ---------- */
+
+.s4_about_grid {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 10px;
+    grid-template-areas:
+        "img-selfportrait img-selfportrait img-selfportrait"
+        "hd-about hd-about hd-about"
+        "txt-about txt-about txt-about"
+        ;
+}
+.img-selfportrait {
+    grid-area:img-selfportrait;
+    grid-column: 2 / 3;
+}
+.hd-about {
+    grid-area:hd-about;
+    text-align: center;
+}
+.txt-about {
+    grid-area:txt-about;
+    line-height: 2;
+}
+
+@media (min-width: 768px) {
+    .s4_about_grid {
+        grid-template-areas:
+            "img-selfportrait hd-about hd-about"
+            "img-selfportrait txt-about txt-about"
+            "img-selfportrait txt-about txt-about"
+        ;
+    }
+    
+    .img-selfportrait {
+        grid-column: 1 / 2;
+    }
+    .hd-about {
+        text-align: left;
+        padding-left: 20px;
+    }
+    .txt-about {
+        padding-left: 20px;
+    }
+
+}
+
+@media (min-width: 992px) {
+    .s4_about_grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-gap: 10px;
+        grid-template-areas:
+            "hd-about hd-about"
+            "txt-about img-selfportrait"
+        ;
+    }
+    
+    .img-selfportrait {
+        grid-column: 2 / 3;
+    }
+}
+
+
+/* ---------- s5_prints & s7_drawings ---------- */
+
+.my-thumbs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+    justify-items: center;
+}
+
+.my-thumbs img {
+    display: block;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+}
+
+.my-thumbs .my-bk-image{
+    box-shadow: none;
+}
+
+/* ---------- s6_paintings ---------- */
+
+.my-paintings-container{
+    display:grid;
+    min-height: 600px;
+    background: white;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+        "one one two three three"
+        "one one four five five"
+        "six seven seven five five"
+        "six eight nine nine ten"
+        ;
+    grid-gap: 2px;    
+    border: 2px solid white;
+    outline: none;
+}
+
+#s6_paintings aside{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+}
+
+#s6_paintings .windmill{
+    width: 60%;
+    justify-self: end;
+    align-self: end;
+}
+
+@media (max-width: 768px) {
+    #s6_paintings aside {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "my-paintings-area"
+            "windmill"
+            ;
+    }
+    
+    .my-paintings-area{
+        grid-area: my-paintings-area;
+    }
+    
+    .windmill{
+        grid-area:windmill;
+    }
+}
+
+@media (max-width: 576px){
+    .windmill{
+        display:none;
+    }
+}
+
+.my-cursor {
+    cursor:pointer;
+    outline: none;
+}
+
+.painting-1{
+    background:url("img/paintings-img/1920px-P1150002_Cognacq-Jay_Rembrandt_anesse_de_Balaam_rwk.jpg"); 
+    background-position: center; 
+    background-size: cover;
+    grid-area: one;
+}
+.painting-2{
+    background:url("img/paintings-img/1920px-Rembrandt_-_Rembrandt_and_Saskia_in_the_Scene_of_the_Prodigal_Son_-_Google_Art_Project.jpg"); background-position: center; 
+    background-size: cover;
+    grid-area: two;
+}
+.painting-3{
+    background:url("img/paintings-img/1920px-Rembrandt_van_Rijn_-_Portrait_of_Willem_Burchgraeff_-_O_854_-_Slovak_National_Gallery.jpg"); 
+    background-position: center; 
+    background-size: cover;
+    grid-area: three;
+}
+.painting-4{
+    background:url("img/paintings-img/1920px-Rembrandt_van_Rijn_198.jpg"); 
+    background-position: center; 
+    background-size: cover;
+    grid-area: four;
+}
+.painting-5{
+    background:url("img/paintings-img/2560px-Rembrandt_Harmensz._van_Rijn_-_Old_Man_with_a_Gold_Chain_-_Google_Art_Project.jpg"); 
+    background-position: center; 
+    background-size: cover;
+    grid-area: five;
+}
+.painting-6{
+    background:url("img/paintings-img/2560px-Rembrandt_Harmensz._van_Rijn_-_Zelfportret_op_jeugdige_leeftijd_-_Google_Art_Project.jpg"); 
+    background-position: center; 
+    background-size: cover;
+    grid-area: six;
+}
+.painting-7{
+    background:url("img/paintings-img/2880px-Rembrandt_The_Artist_in_his_studio.jpg"); background-position: center; 
+    background-size: cover;
+    grid-area: seven;
+}
+.painting-8{
+    background:url("img/paintings-img/Rembrandt-SMELL.jpg"); 
+    background-position: center; 
+    background-size: cover;
+    grid-area: eight;
+}
+.painting-9{
+    background:url("img/paintings-img/Rembrandt_-_Portrait_of_a_Woman_with_Gloves_-_NGI.808.jpg"); background-position: center; 
+    background-size: cover;
+    grid-area: nine;
+}
+.painting-10{
+    background:url("img/paintings-img/Rembrandt_van_Rijn_197.jpg"); background-position: center; 
+    background-size: cover;
+    grid-area: ten;
+}
+
+
+/* ---------- s7_drawings ---------- */
+
+/* See s5_prints CSS above
+
+/* ---------- s8_contact ---------- */
+
+.contact-copy{grid-area: contact-copy;}
+.contact-map{grid-area: contact-map;}
+.contact-picture{grid-area: contact-picture;}
+
+.contacts_grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-template:
+        "contact-copy contact-map contact-map"
+        "contact-picture contact-map contact-map"
+        ;
+}
+
+@media (max-width: 768px) {
+    .contacts_grid{
+        grid-template-columns: repeat(2, auto);
+        grid-auto-rows: repeat(3, auto);
+        grid-template:
+            "contact-picture contact-copy"
+            "contact-map contact-map"
+            "contact-map contact-map"
+        ;
+        
+    }    
+    .contacts-picture{
+        justify-self: end;
+    }
+}
+
+@media (max-width: 576px) {
+    .contacts_grid{
+        grid-template-columns: auto;
+        grid-auto-rows: repeat(4, auto);
+        grid-template:
+            "contact-picture"
+            "contact-copy"
+            "contact-map"
+            "contact-map"
+        ;
+        
+    }    
+    .contacts-picture{
+        transform: scaleX(-1);
+        justify-self: center;
+    }
+    .contacts-copy{
+        text-align: center;
+    }
+}
+
+
+
+
+/* ---------- s9_footer ---------- */
+
+.s9_footer_grid{
+    font-size: small;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, auto);
+    grid-gap: 10px;
+    grid-template-areas: 
+        "footer_hours"
+        "footer_menu"
+        "footer_museum"
+        "footer_painting_names"
+        "footer_links"
+        "footer_img"
+    ;
+}
+
+.footer_museum h1{
+    text-align: center;
+}
+
+.footer_museum, .footer_links{
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.footer_img{
+    width:50%;
+    justify-self: flex-end;
+}
+
+.footer_hours {
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .footer_menu, .footer_museum, .footer_painting_names, .footer_links {
+        border-top: 1px dashed black;
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .footer_img{
+        transform: scaleX(-1);
+    }
+    
+    .footer_hours{
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .s9_footer_grid{
+        font-size: initial;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "footer_hours footer_img"
+            "footer_menu footer_museum"
+            "footer_painting_names footer_links"
+            ;
+    }
+    
+    .footer_museum, .foot_links, .footer_links h1{
+        flex:none;
+        padding-top:0;
+        text-align: left;
+    }
+    
+    .footer_img{
+        width: 50%;
+        justify-self: flex-end;
+    }
+}
+/* ---------- s10_copyright ---------- */
+

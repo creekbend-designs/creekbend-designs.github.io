@@ -126,28 +126,57 @@ main {
     color: rgba(222, 50, 50, 1);
     font-family: 'Bilbo Swash Caps', sans-serif;
   }
-main #weather {
-    margin-top: 1rem;
+  main #conditions {
+    margin-top: 0rem;
+    padding: 0;
     text-align: center;
     font-size: .9rem;
     font-weight: 400;
     text-transform: uppercase;
    }
-  main #temperature {
+   main #weather {
+    margin-top: 0rem;
+    text-align: top;
+    vertical-align: middle;
+    font-size: .9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+   }
+   main #temperature {
     margin-top: 1rem;
     text-align: center;
     font-size: 2.5rem;
     font-weight: 100;
     font-family: 'Cherry Cream Soda', sans-serif;
     color: rgba(222, 50, 50, 1); }
-  main #desc {
-    margin-top: 0rem;
+  main #temps {
+      margin-top: 1rem;
+      text-align: center;
+      font-size: .9rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      }
+  main #lowtemp {
+        padding: 5px;
+      }  
+  main #hightemp {
+        padding: 5px;
+      }    
+  main #sun {
+    margin-top: 1rem;
     text-align: center;
     font-size: .9rem;
     font-weight: 400;
     text-transform: uppercase;
-    padding: 4%; }
-  main #right {
+    }
+  main #sunrise {
+      padding: 5px;
+    }  
+  main #sunset {
+      padding: 5px;
+    }  
+    
+    main #right {
     margin-top: 0rem;
     margin-bottom: 2rem;
     padding: 0 1rem; }
