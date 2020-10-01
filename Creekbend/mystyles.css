@@ -453,7 +453,7 @@ a:link, a:visited {
     grid-area: six;
 }
 .crafts-7{
-    background:url("images/crafts/DSC_0318a.JPG"); background-position: center; 
+    background:url("images/crafts/DSC_0318a.jpg"); background-position: center; 
     background-size: cover;
     grid-area: seven;
 }
@@ -469,7 +469,7 @@ a:link, a:visited {
     grid-area: nine;
 }
 .crafts-10{
-    background:url("images/crafts/IMG_6262.JPG"); background-position: center; 
+    background:url("images/crafts/IMG_6262.jpg"); background-position: center; 
     background-size: cover;
     grid-area: ten;
 }
