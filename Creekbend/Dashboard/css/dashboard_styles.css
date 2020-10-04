@@ -1,0 +1,841 @@
+/*
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+*/
+/* HTML5 display-role reset for older browsers */
+/*
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+*/
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* Prevents iPhone from resizing in landscape mode  */
+html {
+  -webkit-text-size-adjust: none; }
+
+/*  apply a natural box layout model to all elements  */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-size:16px;
+  font-family: 'Baloo Tammudu 2', cursive;
+  font-weight:400;
+  color:#777;
+  background-color:#fff
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+/* -------- s0_header -------- */
+#s0_header {
+  background-color: #333;
+}
+.s0_header_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+        "title_dash title_date"
+        "subtitle_creek subtitle_creek"
+        ;
+}
+header{position:relative;padding:1rem 2% 0rem 2%}
+.title_dash {
+    grid-area: title_dash;
+    font-size: 2rem;
+    font-weight:400;
+    font-family: 'Carter One', cursive;
+    color:#FFF;
+    left: 2%;
+}
+.title_date {
+    grid-area: title_date;
+    font-size: 2rem;
+    font-weight:400;
+    font-family: 'Carter One', cursive;
+    color:#FFF;
+    right: 100%;
+}
+.subtitle_creek {
+    grid-area: subtitle_creek;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .title_dash {
+        font-size: 1.5rem;
+    }
+    .title_date {
+        font-size: 1.5rem;
+    }
+    .subtitle_creek {
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 576px) {
+    .s0_header_grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas:
+            "title_dash"
+            "title_date"
+            "subtitle_creek"
+        ;
+    }
+    .title_date {
+        font-size: 2rem;
+    }
+    .subtitle_creek {
+        font-size: .8rem;
+    }
+}
+
+/*
+div#wrapper {
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(#f3f6f9 0%, #d1ddeb 100%); }
+*/
+
+/* -------- s1_navbar -------- */
+#s1_navbar{background-color:#de3232;}
+#s1_navbar{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+}
+
+.navbar-toggler-icon {
+    height: 1.2em!important;
+    width: 1.2em!important;
+    background-size: 75% 75%!important;
+}
+
+.navbar_dashboard {
+    padding: 0;
+}   
+nav {
+    background-color: #de3232;
+/*  padding: 0px 2%; */
+}
+div#navbarNav{background-color:#de3232}
+
+nav ul {
+    width: 100%;
+    height: 100%;
+    /*
+    margin-left: 4%;
+    margin-right: 4%;
+    */
+}
+
+nav li {
+/*    width:14.285714%; */
+    width: 25%;
+    border-left:solid 1px rgba(255,255,255,0.4);
+    border-right:solid 1px rgba(0,0,0,0.4);
+    /* font-family: 'Carter One', cursive; */
+    font-family:'Baloo Tammudu 2', cursive!important;
+    border-radius: 0px;
+    padding-left: 10px;
+    font-size: .8rem;
+    color: white!important;
+    text-decoration: none!important;
+}
+nav li.active { background-color: rgba(0,0,0,0.3);}
+nav li:hover { background-color: rgba(0,0,0,0.2);}
+nav a:link:active { background-color: rgba(0,0,0,0.2);}
+
+div#navbarNav .navbar-collapse .open{background-color:#0000FF
+
+}
+
+.navbar-default .navbar .open .dropdown-menu > li > a {
+    color: #0f4c92;
+  }
+.narbar-nav {
+    width: 100%!important;
+    color: red!important;
+}
+.collapse {
+    width: 100%;
+}
+/*
+nav button {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%, white 60%, rgba(255, 255, 255, 0.6) 100%);
+    padding: 10px 10px;
+    margin-left: 4%; }
+*/
+/*
+nav button {
+    font-weight:300;
+    font-size:1rem;
+    margin:0;
+    padding:0rem 0;
+}
+*/
+nav button:hover{background-color:#bf2d2d}
+
+
+/* -------- s2_dashboard -------- */
+/*#s2_dashboard{background-color:#f0e9d7;} */
+/*#s2_dashboard{background-color: rgba(98, 128, 133, .3);} /* 73 99 102 - 496366 --- 98 128 133 628085 */
+#s2_dashboard {
+  min-height: 5em; 
+  padding: 2em;
+}
+
+.s2_dashboard_grid {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 10px;
+    grid-template-areas:
+        "db_weather db_events db_events"
+        "db_weather db_menu db_menu"
+        ;
+}
+.db_weather {
+    grid-area:db_weather;
+}
+.db_events {
+    grid-area:db_events;
+    height: 100%;
+}
+.db_menu {
+    grid-area:db_menu;
+    height: 100%;
+}
+
+@media (max-width: 500px) {
+    .s2_dashboard_grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-gap: 10px;
+        grid-template-areas:
+            "db_weather"
+            "db_events"
+            "db_menu"
+        ;
+    }
+}
+
+.field_set {
+    border: #818686 2px solid;
+    background-color: rgba( 169, 169, 169, .1)
+}
+.field_set_legend {
+    font-family: 'Carter One', cursive;
+    font-size: 20px;
+    margin-left: 10px;
+    padding: 10px!important;
+    /*margin: 0px 0px 0px 0px!important; */
+    color: #818686;
+}
+#location {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+/*    color: rgba(222, 50, 50, 1); */
+    color: rgba(50, 50, 50, .6);
+    font-family: 'Carter One', sans-serif;
+  }
+#conditions {
+    margin-top: 0rem;
+    padding: 0;
+    text-align: center;
+    font-size: .9rem;
+    font-weight: 400;
+    font-family: 'Carter One', sans-serif;
+    text-transform: uppercase;
+   }
+#weather {
+    margin-top: 0rem;
+    text-align: center;
+    font-size: .9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+   }
+#temperature {
+    margin-top: 0rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 100;
+    font-family: 'Carter One', sans-serif;
+    color: rgba(222, 50, 50, 1); }
+#temps {
+    margin-top: 0rem;
+    text-align: center;
+    font-size: .9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 4%; }
+#lowtemp {
+    padding: 5px;
+}
+#hightemp {
+    padding: 5px;
+}
+#sun {
+    margin-top: 0rem;
+    text-align: center;
+    font-size: .9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    }
+#sunrise {
+      padding: 5px;
+    }  
+#sunset {
+      padding: 5px;
+    }  
+
+
+/* MAIN  */
+main {
+  min-height: 5em; 
+  padding: 2em;
+}
+h1 {
+    font-family: 'Carter One', cursive;
+    font-size:2.5rem;
+    color: rgba(50, 50, 50, .6);
+    /*color:#de3232;*/
+    text-align:center
+}
+h2 {
+    font-family: 'Carter One', cursive;
+    /* font-size:2rem; */
+    color:#de3232
+}
+/*
+p {line-height:130%}
+p#desc {text-align:center;font-size:1.4rem}
+span {font-weight:400}
+figure.photo {margin-top:1rem;border:1px solid #aaa}
+figure.photo img {width:100%;display:block}
+main section {margin-top:2rem}
+a.reserve {display:block;font-weight:400;background-color:#de3232;color:#fff;text-decoration:none;padding:1rem 0;margin:1rem 0;border-radius:20px;text-align:center}
+*/
+
+
+main #right {
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem; }
+  main #right img {
+    width: 40px; }
+  main #right div {
+    /* border-bottom: 1px solid rgba(31, 105, 190, 0.2); */
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    padding-top: .6rem;
+    display: flex;
+    display: -ms-flexbox;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center; }
+
+
+/*  FOOTER  */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1em;
+  background-color: #de3232;
+  color: #fff;
+  font-size: .9rem; }
+
+/* OTHER */
+@media only screen and (min-width: 480px) {
+  #s3_weather, #right {
+    float: left;
+    width: 25%; } }
+@media only screen and (min-width: 800px) {
+  div#wrapper {
+    max-width: 800px;
+    margin: 3rem auto 0 auto;
+    border: 1px solid #666;
+    height: auto;
+    box-shadow: 5px 5px 10px #999; }
+
+  footer {
+    clear: both;
+    position: relative; } }
+/*
+# sourceMappingURL=styles.css.map
+*/
+
+/* ---------- s6_boys_navbar ---------- */
+
+#s6_boys_navbar{background-color:#de3232;}
+#s6_boys_navbar{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+}
+.navbar_boys {
+    padding: 0;
+}  
+
+/* ---------- s7_boys ---------- */
+
+#s7_boys{background-color:#cccccc;}
+
+.chore_time {
+    font-size: 1rem;
+    font-family: 'Carter One', cursive;
+    color: #de3232;
+}
+.chore_label {
+    font-size: 1rem;
+    font-family: 'Baloo Tammudu 2', cursive;
+    color: #111;
+    padding-left: .5rem;
+}
+#s7_boys .card {
+    border-width: 1px;
+/*    border-color: #414046; */
+    border-color: #dddddd;
+    border-radius: 0%;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+}
+
+.s7_boys_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+}
+
+.s7_boys_subGrid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+        "boy_name chore_pts"
+        "boy_chores boy_chores"
+        "boy_img boy_games"
+        ;    
+}
+.boy_img {
+    grid-area: boy_img;
+}
+.boy_name {
+    grid-area: boy_name;
+}
+.chore_pts {
+    grid-area: chore_pts;
+}
+.boy_chores {
+    grid-area: boy_chores;
+}
+.boy_games {
+    grid-area: boy_games;
+    color: #414046;
+}
+
+#s7_boys .card img {
+    border-color: #dddddd;
+    border-radius: 0%;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+}
+
+#s8_boys a {
+    color: #777;
+}
+
+@media (max-width: 768px) {
+   .s7_boys_grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 10px;
+    } 
+    /*
+    .s7_boys_subGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-gap: 15px;
+    }
+    */
+}
+/*
+@media (max-width: 576px) {
+    .s7_boys_grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, auto); /* Should this be 3 */
+    }
+    
+    .s7_boys_subGrid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, auto); /* Should this be 2 */
+        grid-gap: 15px;
+    }
+}
+*/
+.text_plain {
+    font-family: 'Lato', sans-serif;
+    color: #999999;
+}
+
+
+/* ---------- s8_boys ---------- */
+#s8_boys{background-color:#cccccc;}
+
+#s8_boys .boy_card_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 10px;
+    grid-template-areas: 
+        "owen_cardg andrew_cardg austin_cardg"
+        ;
+}
+#s8_boys .boy_card {
+    border-radius: 0px;
+    margin-bottom: 1.4rem;
+    /* border-color: #414046; */
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+}
+#s8_boys .owen_cardg {
+    grid-area: owen_cardg;
+}
+#s8_boys .owen_card {
+    border-bottom: 5px solid rgba(252, 255, 77, 1);
+}
+#s8_boys .andrew_cardg {
+    grid-area: andrew_cardg;
+}
+#s8_boys .andrew_card {
+    border-bottom: 5px solid rgba(255, 77, 77, 1);
+}
+#s8_boys .austin_cardg {
+    grid-area: austin_cardg;
+}
+#s8_boys .austin_card {
+    border-bottom: 5px solid rgba(77, 77, 255, 1);
+}
+@media (max-width: 768px) {
+   #s8_boys .boy_card_grid  {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 10px;
+        grid-template-areas: 
+           "owen_cardg"
+           "andrew_cardg"
+           "austin_cardg"
+           ;
+    } 
+}
+#s8_boys .boy_card_header {
+    font-family: "Carter One", cursive;
+    font-size: 1.5rem;
+    color: #de3232; 
+    background-color: #dddddd;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas:
+        "boy_name chore_pts"
+        ;
+}
+.boy_name {
+    grid-area: boy_name;
+}
+.chore_img {
+/*    grid-area: chore_img; */
+    height: 35px;
+    border: none;
+    box-shadow: none!important;
+    padding: 0px 10px 5px 10px;
+}
+.chore_pts {
+    grid-area: chore_pts;
+    float: right;
+    font-size: 1.5rem;
+}
+
+.boy_chore {
+    /*
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    */
+    /*
+    background-image: url("../images/coin.png");
+    background-repeat: no-peat;
+    background-size: cover;
+    padding: .5rem;
+    opacity: .5;
+    */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+        "chore_title"
+        "chore_list"
+        ;
+}
+.boy_chore::before {
+    content: "";
+    background-image: url("../images/coin.png");
+    background-repeat: no-peat;
+    background-size: cover;
+    position: absolute;
+    top: 62px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: 65%;
+    /* padding: .5rem; */
+    opacity: .3;
+    /*height: 100vw;*/
+}
+.chore_title {
+    grid-area: chore_title;
+    padding-left: 10px;
+    padding-top: 25px;
+}
+.chore_list {
+    grid-area: chore_list;
+    position: relative;
+    padding-left: 10px;
+    padding-top: 30px;
+}
+#s8_boys .chore_title {
+    position: absolute;
+    top: 50px;
+    color: #777;
+    font-family: "Carter One", cursive;
+    font-size: 1.2rem;
+}
+#s8_boys .boy_game_body {
+    padding: .5rem;
+}
+#s8_boys .boy_game_body_text {
+    font-family: "Carter One", cursive;
+    font-size: 1.2rem;
+}
+
+.boys_gameGrid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(auto);
+        /*grid-template-rows: repeat(3, auto); /* Should this be 2 */
+        grid-gap: 15px;
+    }
+.owen_game_name1 {
+    grid-row: 1 / 2;
+}
+.owen_game_pic1 {
+    grid-row: 2 / 3;
+}
+
+div.OD_bg1 {
+  background: url("../images/OD_Shooter.png");
+  background-repeat: no-repeat;
+  line-height: 1;
+  background-size: cover;
+  height: 200px;
+  width: 200px;
+  /* border: 2px solid #777; */
+}
+div.AW_bg1 {
+  background: url("../images/AW_Drawing.png");
+  background-repeat: no-repeat;
+  line-height: 1;
+  background-size: cover;
+  height: 200px;
+  width: 200px;
+  /* border: 2px solid #777; */
+}
+div.AW_bg2 {
+  background: url("../images/AW_pingpong.png");
+  background-repeat: no-repeat;
+  line-height: 1;
+  background-size: cover;
+  height: 200px;
+  width: 200px;
+  /* border: 2px solid #777; */
+}
+div.transbox {
+  margin-top: 30px;
+  background-color: #ffffff;
+  /*border: 1px solid black;*/
+  opacity: 0.6;
+}
+
+div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: black;
+}
+#grad1 {
+  height: 200px;
+  background-color: #cccccc;
+  background-image: linear-gradient(red, yellow);
+}
+
+input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+    background-color: red!important;
+    border-radius: 0px!important;
+}
+input[type='checkbox']:checked {
+    background: #abd;
+    background-color: red!important;
+    border-radius: 0px!important;
+}
+
+
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 1.95em;
+  cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 1.25em; height: 1.25em;
+  border: 2px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '\2713\0020';
+  position: absolute;
+  top: .15em; left: .22em;
+  font-size: 1.3em;
+  line-height: 0.8;
+  color: #de3232;
+  transition: all .2s;
+  font-family: 'Lucida Sans Unicode', 'Arial Unicode MS', Arial;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+[type="checkbox"]:disabled:checked + label:after {
+  color: #999;
+}
+[type="checkbox"]:disabled + label {
+  color: #aaa;
+}
+/* accessibility */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 2px dotted blue;
+}
+
+/* hover style just for information */
+label:hover:before {
+  border: 2px solid #aaa!important;
+}
+
+
+
+
+
+
+/* Useless styles, just for demo design */
+
+body {
+  font-family: "Open sans", "Segoe UI", "Segoe WP", Helvetica, Arial, sans-serif;
+  color: #777;
+}
+h1, h2 {
+  margin-bottom: .25em;
+  font-weight: normal;
+  text-align: center;
+}
+h2 {
+  margin: .25em 0 2em;
+  color: #aaa;
+}
+form {
+  width: 7em;
+  margin: 0 auto;
+}
+.txtcenter {
+  margin-top: 4em;
+  font-size: .9em;
+  text-align: center;
+  color: #aaa;
+}
+.copy {
+ margin-top: 2em; 
+}
+.copy a {
+ text-decoration: none;
+ color: #4778d9;
+}

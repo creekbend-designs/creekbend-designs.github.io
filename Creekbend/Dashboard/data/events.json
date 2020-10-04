@@ -1,0 +1,77 @@
+[
+    { "event": [
+        {   "description":"Guitar Lesson",
+            "day": "Tue",
+            "time": "3:30PM",
+            "for": "Owen",
+            "location" : "Pickin Parlor"
+        },
+        {   "description":"Soccer Practice",
+            "day": ["Mon","Wed"],
+            "time": "5:30PM",
+            "for": ["Andrew","Austin","Owen"],
+            "location" : "Stenger fields 2 and 6"
+        },
+        {   "description":"Online Poker",
+            "day": ["Fri","Sat"],
+            "time": "7:00PM",
+            "for": "Dad",
+            "location" : "Home"
+        },
+        {   "description":"Home Soccer Game",
+            "date": "10-03",
+            "time": "12:00PM",
+            "for": "Andrew and Austin",
+            "location" : "Stenger Field 32"
+        },
+        {   "description":"Home Soccer Game",
+            "date": "10-10",
+            "time": "12:00PM",
+            "for": "Owen",
+            "location" : "Stenger Field 1"
+        },
+        {   "description":"Home Soccer Game",
+            "date": "10-10",
+            "time": "3:00PM",
+            "for": "Andrew and Austin",
+            "location" : "Stenger Field 31"
+        },
+        {   "description":"Home Soccer Game",
+            "date": "10-17",
+            "time": "9:00AM",
+            "for": "Owen",
+            "location" : "Stenger Field 36"
+        },
+        {   "description":"Away Soccer Game",
+            "date": "10-17",
+            "time": "10:30AM",
+            "for": "Andrew and Austin",
+            "location" : "Stenger Field 31"
+        },
+        {   "description":"Away Soccer Game",
+            "date": "10-24",
+            "time": "12:30PM",
+            "for": "Owen",
+            "location" : "Gates South Field 1B"
+        },
+        {   "description":"Away Soccer Game",
+            "date": "10-24",
+            "time": "1:30PM",
+            "for": "Andrew and Austin",
+            "location" : "Stenger Field 34"
+        },
+        {   "description":"Away Soccer Game",
+            "date": "10-31",
+            "time": "2:00PM",
+            "for": "Andrew and Austin",
+            "location" : "Westfield Village East #6"
+        },
+        {   "description":"Away Soccer Game",
+            "date": "11-07",
+            "time": "9:00AM",
+            "for": "Owen",
+            "location" : "Clement Park #9B"
+        }
+    ]
+    }
+]

@@ -1,0 +1,300 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title id="title">Creekbend Dashboard</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Carter+One&display=swap" rel="stylesheet">
+<link href="css/dashboard_styles.css" rel="stylesheet" type="text/css">
+<!--<link rel="icon" type="image/png" href="images/weatherLogo.png" /> -->
+
+</head>
+
+<body onload="setup(), loadChores()">
+
+<!-- s0_header -->
+<section id="s0_header">
+    <div>
+	<header class="s0_header_grid">
+	<!--<figure class="wu"><img src="images/weatherLogo.png"></figure>-->
+	<h1 class="title_dash" align="left"><a href="../index.html">Creekbend</a> Dashboard</h1>
+	<h2 class="subtitle_creek">It's a great day to be @ the creek!</h2>
+	<h1 id="thisday" class="title_date">Today</h1>
+    </header>
+    </div>
+</section> <!-- s0_header -->
+
+<!-- s1_navbar -->
+<section id="s1_navbar">
+
+    <nav class="navbar_dashboard navbar navbar-expand-sm navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+        <ul class="navbar-nav mr-auto justify-content-between">
+            <li id="day0" class="active nav-item swtichDay" onclick="switchDay(this.id)" value="0">Sunday</li>
+            <li id="day1" class="nav-item swtichDay" onclick="switchDay(this.id)" value="1">Monday</li>
+            <li id="day2" class="nav-item swtichDay" onclick="switchDay(this.id)" value="2">Tuesday</li>
+            <li id="day3" class="nav-item swtichDay" onclick="switchDay(this.id)" value="3">Wednesday</li>
+            <li id="day4" class="nav-item swtichDay" onclick="switchDay(this.id)" value="4">Thursday</li>
+            <li id="day5" class="nav-item swtichDay" onclick="switchDay(this.id)" value="5">Friday</li>
+            <li id="day6" class="nav-item swtichDay" onclick="switchDay(this.id)" value="6">Saturday</li>
+        </ul>
+            
+<!--            <button id="day0" class="switchDay" onclick="switchDay(this.id)" value="0">Sunday</button>
+            <button id="day1" class="switchDay" onclick="switchDay(this.id)" value="1">Monday</button>
+            <button id="day2" class="switchDay" onclick="switchDay(this.id)" value="2">Tuesday</button>
+            <button id="day3" class="switchDay" onclick="switchDay(this.id)" value="3">Wednesday</button>
+            <button id="day4" class="switchDay" onclick="switchDay(this.id)" value="4">Thursday</button>
+            <button id="day5" class="switchDay" onclick="switchDay(this.id)" value="5">Friday</button>
+            <button id="day6" class="switchDay" onclick="switchDay(this.id)" value="6">Saturday</button>        
+            -->
+        </div> 
+    </nav>
+</section> <!-- s1_navbar -->
+
+<!-- s2_dashboard -->
+<section id="s2_dashboard" class="m-10">
+    <div class="s2_dashboard_grid">
+
+    <section class="db_weather" id="s2a_weather">    
+        <fieldset class="border p-2 field_set">
+            <legend id="location2" class="field_set_legend px-4">Weather</legend>        
+    
+    		<div id="location">Creekbend</div>
+            <div id="conditions">
+            <div><span><img id="icon"></span></div>
+            <div><span id="weather">Current Conditions</span></div>
+            </div>
+            <div id="temperature">70</div>
+            <div id="temps">
+	          <div><span id="lowtemp">Cold</span></div>
+		      <div><span id="hightemp">Warm</span></div>
+            </div>
+	        <div id="sun">
+		      <div><span id="sunrise">Early</span></div>
+              <div><span id="sunset">Late</span></div>
+            </div>
+        </fieldset>
+    </section> <!-- s2a_weather -->
+
+    <section class="db_events" id="s2b_events">
+        <fieldset class="border p-2 field_set">
+            <legend class="field_set_legend px-4">Today's Events</legend>        
+
+        <div id="myevents">
+        <p>Sample Item 1</p>
+        <p>Sample Item 1</p>
+        <p>Sample Item 1</p>
+        <p>Sample Item 1</p>
+        <p>Sample Item 1</p>
+        </div>
+        </fieldset>
+    </section> <!-- s2b_events -->             
+                                
+    <section class="db_menu" id="s2c_menu">
+        <fieldset class="border p-2 field_set">
+            <legend class="field_set_legend px-4">School Menu</legend>        
+            <p>Breakfast: <span id="breakfast">Cinnamon Rolls</span></p>
+        <p>Lunch: <span id="lunch">Cheese Pizza</span></p>
+        <!--<a class="reserve" href="#">Make a Reservation</a> -->
+        </fieldset>
+    </section> <!-- s2c_menu -->
+    </div>
+    
+</section> <!-- s2_dashboard -->
+
+<!-- s6_boys_navbar -->
+<section id="s6_boys_navbar">
+    <nav class="navbar_boys navbar navbar-expand-sm navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavB" aria-controls="navbarNavB" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNavB">
+
+        <ul class="navbar-nav mr-auto justify-content-between">
+            <li id="boys" class="active nav-item swtichKid" onclick="switchKid(this.id)" value="boys">The Boys</li>
+            <li id="owen" class="nav-item swtichKid" onclick="switchKid(this.id)" value="owen">Owen</li>
+            <li id="andrew" class="nav-item swtichKid" onclick="switchKid(this.id)" value="andrew">Andrew</li>
+            <li id="austin" class="nav-item swtichKid" onclick="switchKid(this.id)" value="austin">Austin</li>               
+        </ul>
+
+<!--            
+<!--            
+            <button id="boys" class="switchKid" onclick="switchKid(this.id)" value="boys">The Boys</button>
+            <button id="owen" class="switchKid" onclick="switchKid(this.id)" value="owen">Owen</button>
+            <button id="andrew" class="switchKid" onclick="switchKid(this.id)" value="andrew">Andrew</button>
+            <button id="austin" class="switchKid" onclick="switchKid(this.id)" value="austin">Austin</button>    
+-->
+        </div> 
+    </nav>
+</section> <!-- s6_boys_navbar -->
+
+<!--
+<section id="s7_boys">   
+    <div class="container py-5">
+        <h3 class="chore_title">My 3 Sons</h3>
+        <div class="s7_boys_grid">
+    
+            <div class="card mx-2">
+                <h2 class="boy_name my-2 h5">Owen</h2>
+                    <div class="card-body s7_boys_subGrid">
+                    <img class="boy_img img-fluid border border-dark" src="images/ODturtle" alt="Owen" height="48px">
+                    <span><img class="chore_pts_img" src="images/coin.png"><h2 id="ODpts1" class="chore_pts h5">0</h2></span>
+                    <div id="ODchores1" class="boy_chores"></div>
+                    <div id="ODgames1" class="boy_games">
+                        <h2 class="chore_title my-2 h5">Games</h2>
+                        <a href="https://scratch.mit.edu/projects/417439679/fullscreen" target="_blank">Shooter</a>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="card mx-2">
+                <div class="card-body s7_boys_subGrid">
+                    <img class="boy_img img-fluid border border-dark" src="images/bananaman.png" alt="Andrew">
+                    <h2 class="boy_name my-2 h5">Andrew</h2>
+                    <span><img class="chore_pts_img" src="images/coin.png"><h2 id="AWpts1" class="chore_pts h5">0</h2></span>
+                    <div id="AWchores1" class="boy_chores"></div>
+                    <div id="AWgames" class="boy_games">
+                        <h2 class="chore_title my-2 h5">Games</h2>
+                        <a href="https://scratch.mit.edu/projects/407508645/fullscreen" target="_blank">DRAWING!!!!!</a>
+                    </div>
+                </div>  
+            </div>
+           
+            <div class="card mx-2">
+                <div class="card-body s7_boys_subGrid">
+                    <img class="boy_img img-fluid border border-dark" src="images/ODturtle.jpg" alt="Austin">
+                    <h2 class="boy_name my-2 h5">Austin</h2>
+                    <span><img class="chore_pts_img" src="images/coin.png"><h2 id="ACpts1" class="chore_pts h5">0</h2></span>
+                    <div id="ACchores1" class="boy_chores"></div>
+                    <div id="ACgames" class="boy_games">
+                        <h2 class="chore_title my-2 h5">Games</h2>
+                        <a href="https://scratch.mit.edu/projects/417439679" target="_blank">Shooter</a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</section> <!-- s7_boys -->
+
+<section id="s8_boys">   
+    <div class="container py-5">
+    <div class="boy_card_grid">
+       
+        <div id="OD_card" class="boy_card card owen_cardg">
+            <div class="boy_card_header owen_card card-header">
+                <div class="boy_name">Owen</div><div id="ODpts" class="chore_pts"><img class="chore_img" src="images/coin.png">0</div>
+            </div>
+            
+            <div class="boy_card_body">
+            
+                <div class="boy_chore owen_card">
+                    <h5 class="chore_title card-title">Chores</h5>
+                    <p id="ODchores" class="chore_list ODchores"></p>
+                </div>
+            
+                <div class="boy_game_body">
+                    <h5 class="boy_game_body_text card-title">Scratch Games</h5>
+                    <a href="https://scratch.mit.edu/projects/417439679" target="_blank">    
+                    <div class="OD_bg1">
+                        <div class="transbox">
+                            <p>Shooter</p>
+                        </div>            
+                    </div>
+                    </a>    
+                </div>     
+            
+            </div>         
+        </div> <!-- Owen -->
+       
+       
+        <div id="AW_card" class="boy_card card andrew_cardg">
+            <div class="boy_card_header andrew_card card-header">
+                <div class="boy_name">Andrew</div><div id="AWpts" class="chore_pts"><img class="chore_img" src="images/coin.png">0</div>
+            </div>
+            
+            <div class="boy_card_body">
+            
+                <div class="boy_chore andrew_card">
+                    <h5 class="chore_title card-title">Chores</h5>
+                    <p id="AWchores" class="chore_list AWchores"></p>
+                </div>
+            
+                <div class="boy_game_body">
+                    <h5 class="boy_game_body_text card-title">Scratch Games</h5>
+                
+                    <a href="https://scratch.mit.edu/projects/407508645" target="_blank">
+                    <div class="AW_bg1">
+                        <div class="transbox">
+                            <p>DRAWING!!!</p>
+                        </div>            
+                    </div>   
+                    </a>
+                      
+                    <a href="https://scratch.mit.edu/projects/403534840" target="_blank">
+                    <div class="AW_bg2">
+                        <div class="transbox">
+                            <p>ping pong</p>
+                        </div>            
+                    </div>
+                    </a>   
+                </div> 
+            </div>
+                 
+        </div> <!-- Andrew -->      
+      
+        <div id="AC_card" class="boy_card card austin_cardg">
+            <div class="boy_card_header austin_card card-header">
+                <div class="boy_name">Austin</div><div id="ACpts" class="chore_pts"><img class="chore_img" src="images/coin.png">0</div>
+            </div>
+            
+            <div class="boy_card_body">
+            
+            <div class="boy_chore austin_card">
+                <h5 class="chore_title card-title">Chores</h5>
+                <p id="ACchores" class="chore_list ACchores"></p>
+            </div>
+            
+            <div class="boy_game_body">
+                <h5 class="boy_game_body_text card-title">Scratch Games</h5>
+                <div id="ACgames" class="boy_games">
+                <span>No current publications</span>
+                </div>
+            </div>
+            </div>         
+        </div> <!-- Andrew -->      
+        
+    </div>
+    </div>
+    
+    
+</section> <!-- s8_boys -->
+           
+<!--  
+                   <div style="display:none" id="footerWrapper">
+        <footer><p></p></footer>
+    </div>
+-->
+
+
+</body>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="js/dashboard.js"></script>
+</html>
